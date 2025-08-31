@@ -4,5 +4,14 @@
 @tailwind utilities;
 
 body {
-  font-family: Outfit;
+  font-family: var(--font-outfit), sans-serif;
+}
+
+/* To ensure Tailwind utilities work properly */
+.font-Outfit {
+  font-family: var(--font-outfit), sans-serif;
+}
+
+.font-Ovo {
+  font-family: var(--font-ovo), serif;
 }
