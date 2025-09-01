@@ -6,6 +6,7 @@
   --color-darkTheme: #11001f;
   --shadow-black: 4px 4px 0 #000;
   --shadow-white: 4px 4px 0 #fff;
+  --grid-template-columns-auto: repeat(auto-fit, minmax(200px, 1fr));
 }
 body {
   font-family: var(--font-outfit), sans-serif;
@@ -18,4 +19,14 @@ body {
 
 .font-Ovo {
   font-family: var(--font-ovo), serif;
+}
+
+/* Add this to your globals.css */
+a:focus {
+  outline: none;
+}
+
+/* Or more specific */
+nav a:focus {
+  outline: none;
 }
