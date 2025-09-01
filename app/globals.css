@@ -6,13 +6,17 @@
   --color-darkTheme: #11001f;
   --shadow-black: 4px 4px 0 #000;
   --shadow-white: 4px 4px 0 #fff;
+  --shadow-white-thin: 0 1px 2px rgba(255, 255, 255, 0.1);
   --grid-template-columns-auto: repeat(auto-fit, minmax(200px, 1fr));
 }
+
+/* Enable all dark: variants automatically */
+@variant dark (.dark &);
+
 body {
   font-family: var(--font-outfit), sans-serif;
 }
 
-/* To ensure Tailwind utilities work properly */
 .font-Outfit {
   font-family: var(--font-outfit), sans-serif;
 }
@@ -21,12 +25,10 @@ body {
   font-family: var(--font-ovo), serif;
 }
 
-/* Add this to your globals.css */
 a:focus {
   outline: none;
 }
 
-/* Or more specific */
 nav a:focus {
   outline: none;
 }
