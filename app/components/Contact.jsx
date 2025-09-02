@@ -89,7 +89,7 @@ const [result, setResult] = useState("");
             <motion.textarea 
             initial={{ y: 100, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.6, delay: 1.3 }}
+            transition={{ duration: 0.6, delay: 1 }}
             rows='6' placeholder="Enter your message" required
             className='w-full p-4 outline-none border-[0.5px] border-gray-400 rounded-md bg-white mb-6
             dark:bg-darkHover/30 dark:border-white/90 dark:placeholder:text-white/50' name='message'></motion.textarea>
