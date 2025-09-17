@@ -78,24 +78,28 @@ export const assets = {
 
 export const workData = [
   {
-    title: "Frontend project",
-    description: "Web Design",
+    title: "CLI Rental-App",
+    description: "Python Development",
     bgImage: "/work-1.png",
+    url: "https://github.com/sabindevkota6/TechnoProperty-Nepal.git",
   },
   {
-    title: "Geo based app",
-    description: "Mobile App",
+    title: "Perfume Website",
+    description: "Full-Stack Development",
     bgImage: "/work-2.png",
+    url: "https://github.com/sabindevkota6/ScentedBliss.git",
   },
   {
-    title: "Photography site",
-    description: "Web Design",
+    title: "Networking App",
+    description: "MERN Development",
     bgImage: "/work-3.png",
+    url: "https://github.com/sabindevkota6/Search-the-Professionals.git",
   },
   {
-    title: "UI/UX designing",
-    description: "UI/UX Design",
+    title: "Printer Ecommerce",
+    description: "Front-End Development",
     bgImage: "/work-4.png",
+    url: "https://github.com/sabindevkota6/PressPrint-Nepal.git",
   },
 ];
 

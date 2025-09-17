@@ -33,7 +33,7 @@ const Work = ({ isDarkMode }) => {
 
       className='text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo'> Welcome to my web development portfolio! Here, you'll find a curated 
         selection of my latest projects that showcase my skills and expertise in creating dynamic and user-friendly 
-        websites. Each project reflects my commitment to quality, innovation, 
+        websites and web-applications. Each project reflects my commitment to quality, innovation, 
         and attention to detail. Feel free to explore and see how I can bring your ideas 
         to life through effective web solutions.
          </motion.p>
@@ -52,7 +52,8 @@ const Work = ({ isDarkMode }) => {
             key={index} 
               className='aspect-square bg-no-repeat bg-cover bg-center rounded-lg 
               relative cursor-pointer group'
-              style={{ backgroundImage: `url(${project.bgImage})` }}>
+              style={{ backgroundImage: `url(${project.bgImage})` }}
+              onClick={() => project.url && window.open(project.url, '_blank')}>
                 <div className='bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex
                 items-center justify-between duration-500 group-hover:bottom-7'>
                 <div>
@@ -73,9 +74,12 @@ const Work = ({ isDarkMode }) => {
          whileInView={{ opacity: 1, y: 0 }}
          transition={{ duration: 0.5, delay: 0.6 }}
 
-         href="" className='w-max flex items-center justify-center gap-2 text-gray-700
+         href="https://github.com/sabindevkota6?tab=repositories"
+         target="_blank"
+         rel="noopener noreferrer"
+         className='w-max flex items-center justify-center gap-2 text-gray-700
          border-[0.5px] border-gray-700 rounded-full py-3 px-10 mx-auto my-20 hover:bg-lightHover duration-500
-         dark:text-white dark:border-white dark:hover:bg-darkHover'>Show more 
+         dark:text-white dark:border-white dark:hover:bg-darkHover'>View All Projects 
          <Image src={isDarkMode ? assets.right_arrow_bold_dark : assets.right_arrow_bold} alt='Right Arrow' className='w-4' /></motion.a>
 
 

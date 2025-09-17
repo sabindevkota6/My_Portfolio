@@ -8,10 +8,6 @@ export default {
   theme: {
     extend: {
       colors: {},
-      fontFamily: {
-        Outfit: ["var(--font-outfit)", "sans-serif"],
-        Ovo: ["var(--font-ovo)", "serif"],
-      },
     },
   },
   plugins: [],
