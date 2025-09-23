@@ -1,3 +1,10 @@
+/* Assets and data file
+   - exports all images, icons, and data used throughout the portfolio
+   - organizes project data, service info, and personal details
+   - components import from here to get consistent data and images
+*/
+
+// Image imports - profile pictures, icons, and UI elements
 import user_image from "./user_image.png";
 import code_icon from "./code-icon.png";
 import code_icon_dark from "./code-icon-dark.png";
@@ -36,6 +43,7 @@ import send_icon from "./send-icon.png";
 import right_arrow_bold from "./right-arrow-bold.png";
 import right_arrow_bold_dark from "./right-arrow-bold-dark.png";
 
+// Assets object - maps asset names to imported images for easy component access
 export const assets = {
   user_image,
   code_icon,
@@ -76,6 +84,7 @@ export const assets = {
   right_arrow_bold_dark,
 };
 
+// Portfolio projects data - each item: { title, description, bgImage, url }
 export const workData = [
   {
     title: "CLI Rental-App",
@@ -103,6 +112,7 @@ export const workData = [
   },
 ];
 
+// Services offered data - each service: { icon, title, description, link }
 export const serviceData = [
   {
     icon: assets.web_icon,
@@ -134,6 +144,7 @@ export const serviceData = [
   },
 ];
 
+// Personal info cards data - each item: { icon, iconDark, title, description }
 export const infoList = [
   {
     icon: assets.code_icon,
@@ -156,6 +167,7 @@ export const infoList = [
   },
 ];
 
+// Development tools icons - array of tool images used in About section
 export const toolsData = [
   assets.vscode,
   assets.firebase,

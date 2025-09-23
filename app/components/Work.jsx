@@ -1,12 +1,20 @@
-import { assets } from '@/assets/assets'
-import { workData } from '@/assets/assets'
-import React from 'react'
-import Image from 'next/image'
-import {motion} from "motion/react"
+/* Work component
+   - displays portfolio projects in an interactive grid
+   - shows project cards with hover effects and external links
+   - includes a call-to-action to view all projects on GitHub
+*/
 
+import { assets } from '@/assets/assets' // images and icons
+import { workData } from '@/assets/assets' // array of project data
+import React from 'react'
+import Image from 'next/image' // Next.js optimized image component
+import {motion} from "motion/react" // animation library for scroll effects
+
+// Work component - receives isDarkMode prop for theme switching
 const Work = ({ isDarkMode }) => {
   return (
 
+    // Main container with scroll animations
     <motion.div
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
@@ -15,17 +23,21 @@ const Work = ({ isDarkMode }) => {
       id='work' className='w-full px-[12%] py-10 scroll-mt-20'>
 
 
+      {/* Section subtitle */}
       <motion.h4
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.3 }}
         className='text-center mb-2 text-lg font-Ovo'>My Portfolio</motion.h4>
+      
+      {/* Main title */}
       <motion.h2
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.5 }}
         className='text-center text-5xl font-Ovo'>My latest Works</motion.h2>
 
+      {/* Description paragraph */}
       <motion.p 
       initial={{opacity:0}}
       whileInView={{opacity:1}}
@@ -38,6 +50,7 @@ const Work = ({ isDarkMode }) => {
         to life through effective web solutions.
          </motion.p>
 
+         {/* Projects grid - maps through workData array to create project cards */}
          <motion.div 
          initial={{opacity:0}}
          whileInView={{opacity:1}}
@@ -46,6 +59,7 @@ const Work = ({ isDarkMode }) => {
          className='grid grid-cols-auto my-10 gap-5 dark:text-black'>
             {workData.map((project, index) => (
 
+            // Individual project card with background image and hover effects
             <motion.div 
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.3 }}
@@ -54,12 +68,15 @@ const Work = ({ isDarkMode }) => {
               relative cursor-pointer group'
               style={{ backgroundImage: `url(${project.bgImage})` }}
               onClick={() => project.url && window.open(project.url, '_blank')}>
+                {/* Project info overlay - slides up on hover */}
                 <div className='bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex
                 items-center justify-between duration-500 group-hover:bottom-7'>
+                {/* Project title and description */}
                 <div>
                     <h2 className='font-semibold'>{project.title}</h2>
                     <p className='text-sm text-gray-700'>{project.description}</p>
                 </div>
+                {/* External link button with hover effect */}
                 <div className='border rounded-full border-black w-9
                 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition'>
                         <Image src={assets.send_icon} alt= 'send icon' className='w-5' />
@@ -69,6 +86,7 @@ const Work = ({ isDarkMode }) => {
             ))}
          </motion.div>
 
+         {/* View all projects button - links to GitHub repositories */}
          <motion.a 
          initial={{ opacity: 0, y: 20 }}
          whileInView={{ opacity: 1, y: 0 }}

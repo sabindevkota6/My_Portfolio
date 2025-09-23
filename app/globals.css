@@ -1,5 +1,12 @@
+/* Global styles for portfolio site
+   - sets up custom CSS variables for theme colors and shadows
+   - defines font families and basic styling rules
+   - works with Tailwind CSS for consistent design system
+*/
+
 @import "tailwindcss";
 
+/* Custom theme variables - colors and effects used throughout the site */
 @theme {
   --color-lightHover: #fcf4ff;
   --color-darkHover: #2a004a;
@@ -10,13 +17,15 @@
   --grid-template-columns-auto: repeat(auto-fit, minmax(200px, 1fr));
 }
 
-/* Enable all dark: variants automatically */
+/* Dark mode variant - enables dark: prefix in Tailwind classes */
 @variant dark (.dark &);
 
+/* Global typography - base font for entire site */
 body {
   font-family: var(--font-outfit), sans-serif;
 }
 
+/* Font utility classes for consistent typography */
 .font-Outfit {
   font-family: var(--font-outfit), sans-serif;
 }
@@ -25,6 +34,7 @@ body {
   font-family: var(--font-ovo), serif;
 }
 
+/* Focus styles - removes default outline for cleaner design */
 a:focus {
   outline: none;
 }
