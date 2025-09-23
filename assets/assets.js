@@ -106,29 +106,31 @@ export const workData = [
 export const serviceData = [
   {
     icon: assets.web_icon,
-    title: "Web design",
-    description: "Web development is the process of building, programming...",
-    link: "",
+    title: "Web Development",
+    description:
+      "End-to-end development of dynamic and scalable web applications using modern frameworks (React, Next.js, Node.js, Express, Python, Java etc.), tailored to client needs....",
+    link: "https://sabindevkota6.github.io/web-development/services/2025/09/17/custom-web-application-development.html",
   },
   {
     icon: assets.mobile_icon,
-    title: "Mobile app",
+    title: "UI/UX & Frontend Design",
     description:
-      "Mobile app development involves creating software for mobile devices...",
-    link: "",
+      "Creating responsive, accessible, and visually engaging user interfaces with a focus on performance and user experience using HTML, CSS, Tailwind, and JavaScript frameworks....",
+    link: "https://sabindevkota6.github.io/ui-ux/design/frontend/2025/09/17/ui-ux-frontend-design-services.html",
   },
   {
     icon: assets.ui_icon,
-    title: "UI/UX design",
+    title: "API & Backend Development",
     description:
-      "UI/UX design focuses on creating a seamless user experience...",
-    link: "",
+      "Building secure, efficient, and well-documented RESTful and GraphQL APIs, database design (SQL/NoSQL), and server-side logic for seamless data handling....",
+    link: "https://sabindevkota6.github.io/api/backend/development/2025/09/17/api-backend-development-services.html",
   },
   {
     icon: assets.graphics_icon,
-    title: "Graphics design",
-    description: "Creative design solutions to enhance visual communication...",
-    link: "",
+    title: "Deployment & Maintenance",
+    description:
+      "Hosting, CI/CD setup, cloud deployment (AWS, Vercel, Netlify), performance optimization, and ongoing support to ensure smooth operation and scalability....",
+    link: "https://sabindevkota6.github.io/deployment/maintenance/devops/2025/09/17/deployment-maintenance-services.html",
   },
 ];
 
@@ -150,7 +152,7 @@ export const infoList = [
     icon: assets.project_icon,
     iconDark: assets.project_icon_dark,
     title: "Projects",
-    description: "Built more than 5 projects",
+    description: "Built 10+ projects",
   },
 ];
 
