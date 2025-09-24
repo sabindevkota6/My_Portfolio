@@ -5,7 +5,7 @@
 */
 
 "use client";
-import Navbar from "./components/Navbar"; // navigation bar with menu links
+import Navbar from "./components/navbar"; // navigation bar with menu links
 import Header from "./components/Header"; // hero section with intro
 import About from "./components/About"; // personal info and skills
 import Services from "./components/Services"; // services offered
