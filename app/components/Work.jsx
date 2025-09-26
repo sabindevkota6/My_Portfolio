@@ -10,7 +10,7 @@ import { workData } from '@/assets/assets' // array of project data
 import React from 'react'
 import Image from 'next/image' // Next.js optimized image component
 import {motion} from "motion/react" // animation library for scroll effects
-import { clarityEvents } from '@/utils/clarity' // Microsoft Clarity tracking utilities
+import { clarityEvents } from '@/utils/clarity.js' // Microsoft Clarity tracking utilities
 
 // Work component - receives isDarkMode prop for theme switching
 const Work = ({ isDarkMode }) => {

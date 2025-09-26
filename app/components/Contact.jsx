@@ -10,7 +10,7 @@ import { assets } from '@/assets/assets' // images and icons
 import Image from 'next/image' // Next.js optimized image component  
 import { useState } from 'react' // react hooks for state management
 import {motion} from "motion/react" // animation library for scroll effects
-import { clarityEvents } from '@/utils/clarity' // Import clarity tracking for form events
+import { clarityEvents } from '@/utils/clarity.js' // Import clarity tracking for form events
 
 // Contact component - handles contact form and email submission
 const Contact = () => {

@@ -10,7 +10,7 @@ import { assets } from '@/assets/assets' // images and icons
 import Image from 'next/image' // Next.js optimized image component
 import React from 'react'
 import { motion } from "motion/react" // animation library for scroll effects
-import { clarityEvents } from '@/utils/clarity' // Microsoft Clarity tracking utilities
+import { clarityEvents } from '@/utils/clarity.js' // Microsoft Clarity tracking utilities
 
 // Header component - main hero section with animated intro
 const Header = () => {
