@@ -9,7 +9,7 @@
 import { assets } from '@/assets/assets' // images and icons
 import Image from 'next/image' // Next.js optimized image component
 import React, { useEffect, useRef, useState } from 'react' // react hooks
-import { clarityEvents } from '@/utils/clarity.js' // Microsoft Clarity tracking utilities
+import { clarityEvents } from '../utils/clarity.js' // Microsoft Clarity tracking utilities
 
 // Navbar component - receives theme props and setters
 const Navbar = ({ isDarkMode, setIsDarkMode }) => {

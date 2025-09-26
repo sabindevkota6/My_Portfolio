@@ -10,7 +10,7 @@ import { serviceData } from '@/assets/assets' // array of services data
 import React from 'react'
 import Image from 'next/image' // Next.js optimized image component
 import {motion} from "motion/react" // animation library for scroll effects
-import { clarityEvents } from '@/utils/clarity.js' // Microsoft Clarity tracking utilities
+import { clarityEvents } from '../utils/clarity.js' // Microsoft Clarity tracking utilities
 
 // Services component - shows offered web development services
 const Services = () => {

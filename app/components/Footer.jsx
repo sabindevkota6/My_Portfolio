@@ -8,7 +8,7 @@
 import React from 'react'
 import Image from 'next/image' // Next.js optimized image component
 import { assets } from '@/assets/assets' // images and icons
-import { clarityEvents } from '@/utils/clarity.js' // Microsoft Clarity tracking utilities
+import { clarityEvents } from '../utils/clarity.js' // Microsoft Clarity tracking utilities
 
 // Footer component - receives isDarkMode prop for theme switching
 const Footer = ({ isDarkMode }) => {
