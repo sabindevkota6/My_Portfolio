@@ -1,13 +1,16 @@
-/* Header component
+/* Header component with Microsoft Clarity tracking
    - displays hero section with profile image and introduction
    - includes animated text and call-to-action buttons
    - contains contact and resume download links
+   - tracks CTA button clicks and resume downloads
+   - monitors user engagement with hero section
 */
 
 import { assets } from '@/assets/assets' // images and icons
 import Image from 'next/image' // Next.js optimized image component
 import React from 'react'
 import { motion } from "motion/react" // animation library for scroll effects
+import { clarityEvents } from '@/utils/clarity' // Microsoft Clarity tracking utilities
 
 // Header component - main hero section with animated intro
 const Header = () => {
@@ -53,21 +56,28 @@ const Header = () => {
                     I am a full-stack developer from Kathmandu-Nepal with a passion for creating beautiful and functional web applications.
                 </motion.p>
 
-                {/* Call-to-action buttons - contact and resume download */}
+                {/* Call-to-action buttons - contact and resume download with tracking */}
                 <div className='flex flex-col sm:flex-row items-center gap-4 mt-4'>
-                    {/* Contact button with arrow icon */}
+                    {/* Contact button with arrow icon and clarity tracking */}
                     <motion.a
                     initial={{y: 30, opacity: 0}}
                     whileInView={{y: 0, opacity: 1}}
                     transition={{duration: 0.6, delay: 1}}
-                    href="#contact" className='px-10 py-3 border border-white rounded-full bg-black text-white flex items-center gap-2 dark:bg-transparent'>contact me <Image src={assets.right_arrow_white} alt='' className='w-4' /></motion.a>
+                    href="#contact" 
+                    className='px-10 py-3 border border-white rounded-full bg-black text-white flex items-center gap-2 dark:bg-transparent'
+                    onClick={() => clarityEvents.contactButtonClick()}
+                    >contact me <Image src={assets.right_arrow_white} alt='' className='w-4' /></motion.a>
                     
-                    {/* Resume download button with download icon */}
+                    {/* Resume download button with download icon and clarity tracking */}
                     <motion.a
                      initial={{y: 30, opacity: 0}}
                      whileInView={{y: 0, opacity: 1}}
                      transition={{duration: 0.6, delay: 1}}
-                     href="/Sabin Devkota.CV.pdf" download className='px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2 bg-white dark:text-black'>my resume <Image src={assets.download_icon} alt='' className='w-4' /></motion.a>
+                     href="/Sabin Devkota.CV.pdf" 
+                     download 
+                     className='px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2 bg-white dark:text-black'
+                     onClick={() => clarityEvents.resumeDownload()}
+                     >my resume <Image src={assets.download_icon} alt='' className='w-4' /></motion.a>
                 </div>
     </div>
   )

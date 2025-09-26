@@ -1,7 +1,8 @@
-/* Services component
+/* Services component with Microsoft Clarity tracking
    - displays service cards with hover animations
    - shows web development offerings and skills
    - includes links to read more about each service
+   - tracks service card interactions and user interest
 */
 
 import { assets } from '@/assets/assets' // images and icons
@@ -9,6 +10,7 @@ import { serviceData } from '@/assets/assets' // array of services data
 import React from 'react'
 import Image from 'next/image' // Next.js optimized image component
 import {motion} from "motion/react" // animation library for scroll effects
+import { clarityEvents } from '@/utils/clarity' // Microsoft Clarity tracking utilities
 
 // Services component - shows offered web development services
 const Services = () => {
@@ -55,13 +57,14 @@ const Services = () => {
          className='grid grid-cols-auto gap-6 my-10'>
             {serviceData.map(({icon, title, description, link}, index)=>(
                 
-                // Individual service card with hover effects
+                // Individual service card with hover effects and tracking
                 <motion.div 
                 whileHover={{scale:1.05}}
                 key={index}
                 className='border border-gray-400 rounded-lg px-8 py-12 
                 hover:shadow-black cursor-pointer hover:bg-lightHover 
-                hover:-translate-y-1 duration-500 dark:hover:bg-darkHover dark:hover:shadow-white'> 
+                hover:-translate-y-1 duration-500 dark:hover:bg-darkHover dark:hover:shadow-white'
+                onMouseEnter={() => clarityEvents.serviceCardHover(title)}> 
                 {/* Service icon */}
                 <Image src={icon} alt='' className='w-10'/>
                 {/* Service title */}

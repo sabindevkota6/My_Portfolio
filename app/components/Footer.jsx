@@ -1,12 +1,14 @@
-/* Footer component
+/* Footer component with Microsoft Clarity tracking
    - displays logo, email contact, and social links
    - switches logo based on dark/light theme
-   - includes copyright and social media navigation  
+   - includes copyright and social media navigation
+   - tracks social media link clicks and engagement
 */
 
 import React from 'react'
 import Image from 'next/image' // Next.js optimized image component
 import { assets } from '@/assets/assets' // images and icons
+import { clarityEvents } from '@/utils/clarity' // Microsoft Clarity tracking utilities
 
 // Footer component - receives isDarkMode prop for theme switching
 const Footer = ({ isDarkMode }) => {
@@ -32,10 +34,10 @@ const Footer = ({ isDarkMode }) => {
       mx-[10%] mt-12 py-6'>
         {/* Copyright text */}
         <p>© 2025 Sabin Devkota. All rights reserved.</p>
-        {/* Social media links list */}
+        {/* Social media links list with tracking */}
         <ul className='flex items-center gap-10 justify-center mt-4 sm:mt-0'>
-            <li><a target='_blank' href="https://github.com/sabindevkota6">GitHub</a></li>
-            <li><a target='_blank' href="https://www.linkedin.com/in/sabindevkota6">LinkedIn</a></li>
+            <li><a target='_blank' href="https://github.com/sabindevkota6" onClick={() => clarityEvents.socialLinkClick('github')}>GitHub</a></li>
+            <li><a target='_blank' href="https://www.linkedin.com/in/sabindevkota6" onClick={() => clarityEvents.socialLinkClick('linkedin')}>LinkedIn</a></li>
         </ul>
       </div>
     </div>

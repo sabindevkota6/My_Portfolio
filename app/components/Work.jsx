@@ -1,7 +1,8 @@
-/* Work component
+/* Work component with Microsoft Clarity tracking
    - displays portfolio projects in an interactive grid
    - shows project cards with hover effects and external links
    - includes a call-to-action to view all projects on GitHub
+   - tracks project clicks and portfolio engagement
 */
 
 import { assets } from '@/assets/assets' // images and icons
@@ -9,6 +10,7 @@ import { workData } from '@/assets/assets' // array of project data
 import React from 'react'
 import Image from 'next/image' // Next.js optimized image component
 import {motion} from "motion/react" // animation library for scroll effects
+import { clarityEvents } from '@/utils/clarity' // Microsoft Clarity tracking utilities
 
 // Work component - receives isDarkMode prop for theme switching
 const Work = ({ isDarkMode }) => {
@@ -59,7 +61,7 @@ const Work = ({ isDarkMode }) => {
          className='grid grid-cols-auto my-10 gap-5 dark:text-black'>
             {workData.map((project, index) => (
 
-            // Individual project card with background image and hover effects
+            // Individual project card with background image and hover effects with tracking
             <motion.div 
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.3 }}
@@ -67,7 +69,10 @@ const Work = ({ isDarkMode }) => {
               className='aspect-square bg-no-repeat bg-cover bg-center rounded-lg 
               relative cursor-pointer group'
               style={{ backgroundImage: `url(${project.bgImage})` }}
-              onClick={() => project.url && window.open(project.url, '_blank')}>
+              onClick={() => {
+                clarityEvents.projectView(project.title);
+                project.url && window.open(project.url, '_blank')
+              }}>
                 {/* Project info overlay - slides up on hover */}
                 <div className='bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex
                 items-center justify-between duration-500 group-hover:bottom-7'>
